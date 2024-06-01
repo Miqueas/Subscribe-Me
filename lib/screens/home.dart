@@ -15,11 +15,15 @@ final class HomeScreen extends StatelessWidget {
             children: [
               const Text("Subscribe Me!",
                 style: TextStyle(
-                  fontSize: 24,
+                  fontSize: 36,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              const Text("Create subscriptions for your users, like a pro"),
+              const Text("Create subscriptions for your users, the right way",
+                style: TextStyle(
+                  fontSize: 16,
+                ),
+              ),
               Padding(
                 padding: const EdgeInsets.all(10),
                 child: FilledButton.icon(
