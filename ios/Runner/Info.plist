@@ -45,5 +45,11 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+  <key>NSPhotoLibraryUsageDescription</key>
+  <string>Gallery access for selecting a picture to use as the subscription banner</string>
+  <key>NSCameraUsageDescription</key>
+  <string>Camera access for capturing a picture to use as the subscription banner</string>
+  <key>NSMicrophoneUsageDescription</key>
+  <string>This app DOES NOT use the microphone</string>
 </dict>
 </plist>

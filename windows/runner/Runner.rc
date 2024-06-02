@@ -89,13 +89,13 @@ BEGIN
     BEGIN
         BLOCK "040904e4"
         BEGIN
-            VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "subscribe_me" "\0"
+            VALUE "CompanyName", "io.github.Miqueas" "\0"
+            VALUE "FileDescription", "Create subscriptions for your users, the right way" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "subscribe_me" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2024 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "subscribe_me.exe" "\0"
-            VALUE "ProductName", "subscribe_me" "\0"
+            VALUE "InternalName", "io.github.Miqueas.SubscribeMe" "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2024 io.github.Miqueas. All rights reserved." "\0"
+            VALUE "OriginalFilename", "io.github.Miqueas.SubscribeMe.exe" "\0"
+            VALUE "ProductName", "Subscribe Me!" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END
