@@ -1,4 +1,6 @@
 import "package:flutter/material.dart";
+import "package:subscribe_me/widgets/banner/molecules/banner_molecule.dart";
+import "package:subscribe_me/widgets/dropdown/atoms/dropdown.dart";
 
 final class CreateSubscriptionScreen extends StatelessWidget {
   const CreateSubscriptionScreen({super.key});
@@ -10,58 +12,15 @@ final class CreateSubscriptionScreen extends StatelessWidget {
     return Material(
       child: Scaffold(
         appBar: AppBar(
-          title: const Text("Subscription Creation"),
+          title: const Text("Subscription Creation", style: TextStyle(fontWeight: FontWeight.bold)),
           centerTitle: true,
         ),
         body: Padding(
           padding: const EdgeInsets.all(20),
           child: ListView(
-            shrinkWrap: true,
             children: [
-              const Padding(
-                padding: EdgeInsets.only(top: 20),
-                child: Text("Upload a \"Welcome\" Video or Picture (Optional)"),
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 10),
-                child: Row(
-                  children: [
-                    Expanded(
-                      child: SizedBox(
-                        height: 160,
-                        child: InkWell(
-                          borderRadius: BorderRadius.circular(20),
-                          child: Container(
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20),
-                              color: const Color.fromRGBO(255, 255, 255, 0.07),
-                            ),
-                            child: const Icon(Icons.add),
-                          ),
-                          onTap: () {},
-                        ),
-                      )
-                    )
-                  ],
-                ),
-              ),
-              const Padding(
-                padding: EdgeInsets.only(top: 40),
-                child: Text("Set your monthly subscription fee"),
-              ),
-              DropdownMenu(
-                inputDecorationTheme: InputDecorationTheme(
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                ),
-                expandedInsets: const EdgeInsets.symmetric(),
-                hintText: "Specify it here...",
-                dropdownMenuEntries: const [
-                  DropdownMenuEntry<double>(value: 5.99, label: "\$5.99"),
-                  DropdownMenuEntry<double>(value: 9.99, label: "\$9.99"),
-                ]
-              ),
+              const BannerMolecule(),
+              const DropdownAtom(),
               const Padding(
                 padding: EdgeInsets.only(top: 40),
                 child: Text("Create a description for your subscription"),
