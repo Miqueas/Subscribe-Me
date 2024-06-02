@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'banner.dart';
+part of 'banner_model.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,31 +14,33 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
-Banner _$BannerFromJson(Map<String, dynamic> json) {
-  return _Banner.fromJson(json);
+BannerModel _$BannerModelFromJson(Map<String, dynamic> json) {
+  return _BannerModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$Banner {
+mixin _$BannerModel {
   String get filePath => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $BannerCopyWith<Banner> get copyWith => throw _privateConstructorUsedError;
+  $BannerModelCopyWith<BannerModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $BannerCopyWith<$Res> {
-  factory $BannerCopyWith(Banner value, $Res Function(Banner) then) =
-      _$BannerCopyWithImpl<$Res, Banner>;
+abstract class $BannerModelCopyWith<$Res> {
+  factory $BannerModelCopyWith(
+          BannerModel value, $Res Function(BannerModel) then) =
+      _$BannerModelCopyWithImpl<$Res, BannerModel>;
   @useResult
   $Res call({String filePath});
 }
 
 /// @nodoc
-class _$BannerCopyWithImpl<$Res, $Val extends Banner>
-    implements $BannerCopyWith<$Res> {
-  _$BannerCopyWithImpl(this._value, this._then);
+class _$BannerModelCopyWithImpl<$Res, $Val extends BannerModel>
+    implements $BannerModelCopyWith<$Res> {
+  _$BannerModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -60,21 +62,22 @@ class _$BannerCopyWithImpl<$Res, $Val extends Banner>
 }
 
 /// @nodoc
-abstract class _$$BannerImplCopyWith<$Res> implements $BannerCopyWith<$Res> {
-  factory _$$BannerImplCopyWith(
-          _$BannerImpl value, $Res Function(_$BannerImpl) then) =
-      __$$BannerImplCopyWithImpl<$Res>;
+abstract class _$$BannerModelImplCopyWith<$Res>
+    implements $BannerModelCopyWith<$Res> {
+  factory _$$BannerModelImplCopyWith(
+          _$BannerModelImpl value, $Res Function(_$BannerModelImpl) then) =
+      __$$BannerModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String filePath});
 }
 
 /// @nodoc
-class __$$BannerImplCopyWithImpl<$Res>
-    extends _$BannerCopyWithImpl<$Res, _$BannerImpl>
-    implements _$$BannerImplCopyWith<$Res> {
-  __$$BannerImplCopyWithImpl(
-      _$BannerImpl _value, $Res Function(_$BannerImpl) _then)
+class __$$BannerModelImplCopyWithImpl<$Res>
+    extends _$BannerModelCopyWithImpl<$Res, _$BannerModelImpl>
+    implements _$$BannerModelImplCopyWith<$Res> {
+  __$$BannerModelImplCopyWithImpl(
+      _$BannerModelImpl _value, $Res Function(_$BannerModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -82,7 +85,7 @@ class __$$BannerImplCopyWithImpl<$Res>
   $Res call({
     Object? filePath = null,
   }) {
-    return _then(_$BannerImpl(
+    return _then(_$BannerModelImpl(
       filePath: null == filePath
           ? _value.filePath
           : filePath // ignore: cast_nullable_to_non_nullable
@@ -93,25 +96,25 @@ class __$$BannerImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$BannerImpl extends _Banner {
-  const _$BannerImpl({required this.filePath}) : super._();
+class _$BannerModelImpl extends _BannerModel {
+  const _$BannerModelImpl({required this.filePath}) : super._();
 
-  factory _$BannerImpl.fromJson(Map<String, dynamic> json) =>
-      _$$BannerImplFromJson(json);
+  factory _$BannerModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$BannerModelImplFromJson(json);
 
   @override
   final String filePath;
 
   @override
   String toString() {
-    return 'Banner(filePath: $filePath)';
+    return 'BannerModel(filePath: $filePath)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$BannerImpl &&
+            other is _$BannerModelImpl &&
             (identical(other.filePath, filePath) ||
                 other.filePath == filePath));
   }
@@ -123,27 +126,29 @@ class _$BannerImpl extends _Banner {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$BannerImplCopyWith<_$BannerImpl> get copyWith =>
-      __$$BannerImplCopyWithImpl<_$BannerImpl>(this, _$identity);
+  _$$BannerModelImplCopyWith<_$BannerModelImpl> get copyWith =>
+      __$$BannerModelImplCopyWithImpl<_$BannerModelImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$BannerImplToJson(
+    return _$$BannerModelImplToJson(
       this,
     );
   }
 }
 
-abstract class _Banner extends Banner {
-  const factory _Banner({required final String filePath}) = _$BannerImpl;
-  const _Banner._() : super._();
+abstract class _BannerModel extends BannerModel {
+  const factory _BannerModel({required final String filePath}) =
+      _$BannerModelImpl;
+  const _BannerModel._() : super._();
 
-  factory _Banner.fromJson(Map<String, dynamic> json) = _$BannerImpl.fromJson;
+  factory _BannerModel.fromJson(Map<String, dynamic> json) =
+      _$BannerModelImpl.fromJson;
 
   @override
   String get filePath;
   @override
   @JsonKey(ignore: true)
-  _$$BannerImplCopyWith<_$BannerImpl> get copyWith =>
+  _$$BannerModelImplCopyWith<_$BannerModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

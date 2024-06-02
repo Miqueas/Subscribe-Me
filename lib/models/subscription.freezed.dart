@@ -20,7 +20,7 @@ Subscription _$SubscriptionFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Subscription {
-  Banner get banner => throw _privateConstructorUsedError;
+  BannerModel get banner => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   String get description => throw _privateConstructorUsedError;
   double get fee => throw _privateConstructorUsedError;
@@ -41,7 +41,7 @@ abstract class $SubscriptionCopyWith<$Res> {
       _$SubscriptionCopyWithImpl<$Res, Subscription>;
   @useResult
   $Res call(
-      {Banner banner,
+      {BannerModel banner,
       String name,
       String description,
       double fee,
@@ -49,7 +49,7 @@ abstract class $SubscriptionCopyWith<$Res> {
       String guidelines,
       String welcomeMessage});
 
-  $BannerCopyWith<$Res> get banner;
+  $BannerModelCopyWith<$Res> get banner;
 }
 
 /// @nodoc
@@ -77,7 +77,7 @@ class _$SubscriptionCopyWithImpl<$Res, $Val extends Subscription>
       banner: null == banner
           ? _value.banner
           : banner // ignore: cast_nullable_to_non_nullable
-              as Banner,
+              as BannerModel,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -107,8 +107,8 @@ class _$SubscriptionCopyWithImpl<$Res, $Val extends Subscription>
 
   @override
   @pragma('vm:prefer-inline')
-  $BannerCopyWith<$Res> get banner {
-    return $BannerCopyWith<$Res>(_value.banner, (value) {
+  $BannerModelCopyWith<$Res> get banner {
+    return $BannerModelCopyWith<$Res>(_value.banner, (value) {
       return _then(_value.copyWith(banner: value) as $Val);
     });
   }
@@ -123,7 +123,7 @@ abstract class _$$SubscriptionImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Banner banner,
+      {BannerModel banner,
       String name,
       String description,
       double fee,
@@ -132,7 +132,7 @@ abstract class _$$SubscriptionImplCopyWith<$Res>
       String welcomeMessage});
 
   @override
-  $BannerCopyWith<$Res> get banner;
+  $BannerModelCopyWith<$Res> get banner;
 }
 
 /// @nodoc
@@ -158,7 +158,7 @@ class __$$SubscriptionImplCopyWithImpl<$Res>
       banner: null == banner
           ? _value.banner
           : banner // ignore: cast_nullable_to_non_nullable
-              as Banner,
+              as BannerModel,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -205,7 +205,7 @@ class _$SubscriptionImpl extends _Subscription {
       _$$SubscriptionImplFromJson(json);
 
   @override
-  final Banner banner;
+  final BannerModel banner;
   @override
   final String name;
   @override
@@ -275,7 +275,7 @@ class _$SubscriptionImpl extends _Subscription {
 
 abstract class _Subscription extends Subscription {
   const factory _Subscription(
-      {required final Banner banner,
+      {required final BannerModel banner,
       required final String name,
       required final String description,
       required final double fee,
@@ -288,7 +288,7 @@ abstract class _Subscription extends Subscription {
       _$SubscriptionImpl.fromJson;
 
   @override
-  Banner get banner;
+  BannerModel get banner;
   @override
   String get name;
   @override

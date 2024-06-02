@@ -1,5 +1,5 @@
 import "package:freezed_annotation/freezed_annotation.dart";
-import "package:subscribe_me/models/banner.dart";
+import "package:subscribe_me/models/banner_model.dart";
 
 part "subscription.freezed.dart";
 part "subscription.g.dart";
@@ -9,7 +9,7 @@ class Subscription with _$Subscription {
   const Subscription._();
 
   const factory Subscription({
-    required Banner banner,
+    required BannerModel banner,
     required String name,
     required String description,
     required double fee,

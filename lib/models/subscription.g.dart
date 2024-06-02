@@ -25,7 +25,7 @@ _$SubscriptionImpl _$$SubscriptionImplFromJson(Map<String, dynamic> json) =>
         );
         final val = _$SubscriptionImpl(
           banner: $checkedConvert(
-              'banner', (v) => Banner.fromJson(v as Map<String, dynamic>)),
+              'banner', (v) => BannerModel.fromJson(v as Map<String, dynamic>)),
           name: $checkedConvert('name', (v) => v as String),
           description: $checkedConvert('description', (v) => v as String),
           fee: $checkedConvert('fee', (v) => (v as num).toDouble()),

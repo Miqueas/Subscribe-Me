@@ -1,6 +1,8 @@
 import "package:flutter/material.dart";
-import "package:subscribe_me/widgets/banner/molecules/banner_molecule.dart";
-import "package:subscribe_me/widgets/dropdown/atoms/dropdown.dart";
+import "package:subscribe_me/widgets/banner/banner_widget.dart";
+import "package:subscribe_me/widgets/benefits/molecules/benefits_molecule.dart";
+import "package:subscribe_me/widgets/description/molecules/description.dart";
+import "package:subscribe_me/widgets/dropdown/molecules/dropdown.dart";
 
 final class CreateSubscriptionScreen extends StatelessWidget {
   const CreateSubscriptionScreen({super.key});
@@ -19,29 +21,10 @@ final class CreateSubscriptionScreen extends StatelessWidget {
           padding: const EdgeInsets.all(20),
           child: ListView(
             children: [
-              const BannerMolecule(),
-              const DropdownAtom(),
-              const Padding(
-                padding: EdgeInsets.only(top: 40),
-                child: Text("Create a description for your subscription"),
-              ),
-              const TextField(),
-              const Padding(
-                padding: EdgeInsets.only(top: 40),
-                child: Text("Briefly describe the benefits of your subscription (Max 10)"),
-              ),
-              ListView(
-                shrinkWrap: true,
-                children: [
-                  const TextField(),
-                  const TextField(),
-                  const TextField(),
-                  FilledButton(
-                    child: const Text("Add more"),
-                    onPressed: () {},
-                  )
-                ],
-              ),
+              const BannerWidget(),
+              const DropdownMolecule(),
+              const DescriptionMolecule(),
+              const BenefitsMolecule(),
               const Padding(
                 padding: EdgeInsets.only(top: 40),
                 child: Text("Subscriber Guidelines"),

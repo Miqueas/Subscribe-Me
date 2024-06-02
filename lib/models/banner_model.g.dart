@@ -1,27 +1,28 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'banner.dart';
+part of 'banner_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$BannerImpl _$$BannerImplFromJson(Map<String, dynamic> json) => $checkedCreate(
-      r'_$BannerImpl',
+_$BannerModelImpl _$$BannerModelImplFromJson(Map<String, dynamic> json) =>
+    $checkedCreate(
+      r'_$BannerModelImpl',
       json,
       ($checkedConvert) {
         $checkKeys(
           json,
           allowedKeys: const ['filePath'],
         );
-        final val = _$BannerImpl(
+        final val = _$BannerModelImpl(
           filePath: $checkedConvert('filePath', (v) => v as String),
         );
         return val;
       },
     );
 
-Map<String, dynamic> _$$BannerImplToJson(_$BannerImpl instance) =>
+Map<String, dynamic> _$$BannerModelImplToJson(_$BannerModelImpl instance) =>
     <String, dynamic>{
       'filePath': instance.filePath,
     };

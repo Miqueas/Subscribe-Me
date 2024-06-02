@@ -1,26 +1,20 @@
 import "package:flutter/material.dart";
-import "package:subscribe_me/controllers/banner.dart";
+import "package:provider/provider.dart";
+import "package:subscribe_me/controllers/banner_controller.dart";
 import "package:subscribe_me/widgets/banner/atoms/icon.dart";
 import "package:subscribe_me/widgets/banner/atoms/image.dart";
 import "package:subscribe_me/widgets/common/atoms/label.dart";
 
-final class BannerMolecule extends StatefulWidget {
+final class BannerMolecule extends StatelessWidget {
   const BannerMolecule({super.key});
 
   @override
-  State<BannerMolecule> createState() => _BannerMoleculeState();
-}
-
-
-final class _BannerMoleculeState extends State<BannerMolecule> {
-  final controller = BannerController();
-
-  @override
   Widget build(BuildContext context) {
-    final stackChildren = <Widget>[const BannerIcon()];
+    final provider = Provider.of<BannerProvider>(context);
+    final children = <Widget>[ const BannerIcon()];
 
-    if (controller.banner.filePath != "") {
-      stackChildren.add(BannerImage(path: controller.banner.filePath));
+    if (provider.banner.filePath != "") {
+      children.add(BannerImage(path: provider.banner.filePath));
     }
 
     return Column(
@@ -28,11 +22,11 @@ final class _BannerMoleculeState extends State<BannerMolecule> {
       children: [
         const Label(text: "Upload a \"welcome\" picture (optional)", padding: 20),
         Padding(
-          padding: const EdgeInsets.symmetric(vertical: 14),
+          padding: const EdgeInsets.only(top: 10),
           child: Row(children: [Expanded(
             child: SizedBox(height: 160, child: InkWell(
               borderRadius: BorderRadius.circular(20),
-              child: Stack(children: stackChildren),
-              onTap: () => controller.selectBanner().whenComplete(() => setState((){})))))]))]);
+              onTap: provider.selectBanner,
+              child: Stack(children: children))))]))]);
   }
 }
