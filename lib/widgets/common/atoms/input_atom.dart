@@ -1,9 +1,10 @@
 import "package:flutter/material.dart";
 
-class InputAtom extends StatelessWidget {
-  const InputAtom({super.key, required this.controller});
+final class InputAtom extends StatelessWidget {
+  const InputAtom({super.key, required this.controller, this.onChanged});
 
   final TextEditingController controller;
+  final void Function(String)? onChanged;
 
   @override
   Widget build(BuildContext context) {
@@ -12,6 +13,7 @@ class InputAtom extends StatelessWidget {
       child: TextField(
         controller: controller,
         maxLines: 6,
+        onChanged: onChanged,
         decoration: InputDecoration(
           filled: true, fillColor: const Color(0x10FFFFFF),
           border: OutlineInputBorder(
