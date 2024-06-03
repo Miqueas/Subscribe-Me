@@ -7,12 +7,17 @@ final class BannerProvider extends ChangeNotifier {
 
   BannerProvider(this.banner);
 
-  void selectBanner() async {
-    final file = await ImagePicker().pickImage(source: ImageSource.gallery);
+  void selectBanner(ImageSource source) async {
+    final file = await ImagePicker().pickImage(source: source);
 
     if (file != null) {
       banner = banner.copyWith(filePath: file.path);
       notifyListeners();
     }
+  }
+
+  void removeBanner() {
+    banner = banner.copyWith(filePath: "");
+    notifyListeners();
   }
 }

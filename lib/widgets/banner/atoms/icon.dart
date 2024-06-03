@@ -8,7 +8,7 @@ final class BannerIcon extends StatelessWidget {
     return Container(
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height,
-      decoration: BoxDecoration(borderRadius: BorderRadius.circular(20), color: const Color(0x09FFFFFF)),
+      decoration: BoxDecoration(borderRadius: BorderRadius.circular(20), color: const Color(0x16FFFFFF)),
       child: const Icon(Icons.add));
   }
 }
