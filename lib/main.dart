@@ -1,7 +1,7 @@
 import "package:flutter/material.dart";
 import "package:subscribe_me/theme/custom_theme.dart";
 import "package:subscribe_me/screens/home.dart";
-import "package:subscribe_me/screens/create_subscription.dart";
+import "package:subscribe_me/screens/create_subscription_screen.dart";
 
 void main() => runApp(const SubscribeMe());
 
