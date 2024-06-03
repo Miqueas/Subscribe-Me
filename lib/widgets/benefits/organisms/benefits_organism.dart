@@ -4,7 +4,7 @@ import "package:provider/provider.dart";
 import "package:subscribe_me/controllers/benefits_controller.dart";
 import "package:subscribe_me/widgets/benefits/atoms/benefit_add_button_atom.dart";
 import "package:subscribe_me/widgets/benefits/molecules/benefit_item_molecule.dart";
-import "package:subscribe_me/widgets/common/atoms/label.dart";
+import "package:subscribe_me/widgets/common/atoms/label_atom.dart";
 
 class BenefitsOrganism extends StatefulWidget {
   const BenefitsOrganism({super.key});
@@ -21,7 +21,7 @@ class _BenefitsOrganismState extends State<BenefitsOrganism> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Label(text: "Briefly describe the benefits of your subscription (Max 10)", padding: 40),
+        const LabelAtom(text: "Briefly describe the benefits of your subscription (Max 10)", padding: 40),
         ListView.builder(
           shrinkWrap: true,
           itemCount: provider.benefits.length,
