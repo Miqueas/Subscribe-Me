@@ -1,8 +1,8 @@
 import "package:freezed_annotation/freezed_annotation.dart";
 import "package:subscribe_me/models/banner_model.dart";
 
-part "subscription.freezed.dart";
-part "subscription.g.dart";
+part "subscription_model.freezed.dart";
+part "subscription_model.g.dart";
 
 @freezed
 class Subscription with _$Subscription {
