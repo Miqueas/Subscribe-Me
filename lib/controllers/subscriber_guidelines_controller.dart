@@ -11,8 +11,10 @@ final class SubscriberGuidelinesProvider extends ChangeNotifier {
     });
   }
 
-  void setGuidelines(String text) {
-    guidelines = text;
+  void setGuidelines(String? text) {
+    guidelines = text ?? guidelines;
+    controller.text = guidelines;
+    controller.value = TextEditingValue(text: guidelines);
     notifyListeners();
   }
 }

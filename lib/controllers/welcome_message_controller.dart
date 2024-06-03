@@ -11,8 +11,10 @@ final class WelcomeMessageProvider extends ChangeNotifier {
     });
   }
 
-  void setMessage(String text) {
-    message = text;
+  void setMessage(String? text) {
+    message = text ?? message;
+    controller.text = message;
+    controller.value = TextEditingValue(text: message);
     notifyListeners();
   }
 }

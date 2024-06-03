@@ -7,7 +7,7 @@ final class BannerProvider extends ChangeNotifier {
 
   BannerProvider(this.banner);
 
-  void selectBanner(ImageSource source) async {
+  Future<void> selectBanner(ImageSource source) async {
     final file = await ImagePicker().pickImage(source: source);
 
     if (file != null) {

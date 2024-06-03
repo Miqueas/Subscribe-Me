@@ -3,42 +3,42 @@ import "package:subscribe_me/models/banner_model.dart";
 import "package:subscribe_me/models/subscription_model.dart";
 
 final class SubscriptionProvider extends ChangeNotifier {
-  Subscription sub;
+  Subscription subscription;
 
-  SubscriptionProvider(this.sub);
+  SubscriptionProvider(this.subscription);
 
   void setBanner(BannerModel banner) {
-    sub = sub.copyWith(banner: banner);
+    subscription = subscription.copyWith(banner: banner);
     notifyListeners();
   }
 
   void setName(String name) {
-    sub = sub.copyWith(name: name);
+    subscription = subscription.copyWith(name: name);
     notifyListeners();
   }
 
   void setDescription(String description) {
-    sub = sub.copyWith(description: description);
+    subscription = subscription.copyWith(description: description);
     notifyListeners();
   }
 
   void setFee(double fee) {
-    sub = sub.copyWith(fee: fee);
+    subscription = subscription.copyWith(fee: fee);
     notifyListeners();
   }
 
   void setBenefits(List<String> benefits) {
-    sub = sub.copyWith(benefits: benefits);
+    subscription = subscription.copyWith(benefits: benefits);
     notifyListeners();
   }
 
   void setGuidelines(String guidelines) {
-    sub = sub.copyWith(guidelines: guidelines);
+    subscription = subscription.copyWith(guidelines: guidelines);
     notifyListeners();
   }
 
   void setWelcomeMessage(String welcomeMessage) {
-    sub = sub.copyWith(welcomeMessage: welcomeMessage);
+    subscription = subscription.copyWith(welcomeMessage: welcomeMessage);
     notifyListeners();
   }
 }
