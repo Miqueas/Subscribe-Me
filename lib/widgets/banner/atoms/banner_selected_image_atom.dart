@@ -1,8 +1,8 @@
 import "dart:io";
 import "package:flutter/material.dart";
 
-final class BannerImage extends StatelessWidget {
-  const BannerImage({super.key, required this.path});
+final class BannerImageAtom extends StatelessWidget {
+  const BannerImageAtom({super.key, required this.path});
 
   final String path;
 

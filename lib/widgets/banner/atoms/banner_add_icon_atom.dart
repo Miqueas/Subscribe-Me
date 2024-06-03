@@ -1,7 +1,7 @@
 import "package:flutter/material.dart";
 
-final class BannerIcon extends StatelessWidget {
-  const BannerIcon({super.key});
+final class BannerIconAtom extends StatelessWidget {
+  const BannerIconAtom({super.key});
 
   @override
   Widget build(BuildContext context) {
