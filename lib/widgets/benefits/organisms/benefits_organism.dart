@@ -25,7 +25,7 @@ class _BenefitsOrganismState extends State<BenefitsOrganism> {
         ListView.builder(
           shrinkWrap: true,
           itemCount: provider.benefits.length,
-          itemBuilder:(context, index) => Container(
+          itemBuilder: (context, index) => Container(
             padding: const EdgeInsets.all(4),
             child: BenefitItemMolecule(
               index: index,

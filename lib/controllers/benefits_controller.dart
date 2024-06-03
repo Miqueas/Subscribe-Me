@@ -2,15 +2,12 @@ import "package:flutter/material.dart";
 import "package:subscribe_me/models/benefit.dart";
 
 final class _BenefitItem {
-  int index;
-  var text = "";
   late Benefit benefit;
   late TextEditingController controller;
 
-  _BenefitItem(this.index) {
-    benefit = Benefit(index: index, description: text);
-    controller = TextEditingController(text: text);
-    controller.value = TextEditingValue(text: text);
+  _BenefitItem(int index) {
+    benefit = Benefit(index: index, description: "");
+    controller = TextEditingController();
   }
 }
 
@@ -23,6 +20,13 @@ final class BenefitsProvider extends ChangeNotifier {
     }
   }
 
+  void setBenefit(int index, String text) {
+    benefits[index].benefit = benefits[index].benefit.copyWith(description: text);
+    benefits[index].controller.text = text;
+    benefits[index].controller.value = TextEditingValue(text: text);
+    notifyListeners();
+  }
+
   void addBenefit([int? index]) {
     index ??= benefits.length - 1;
     index = index < 0 ? 0 : index;
@@ -32,9 +36,6 @@ final class BenefitsProvider extends ChangeNotifier {
 
       item.controller.addListener(() {
         item.benefit = item.benefit.copyWith(description: item.controller.text);
-        item.text = item.benefit.description;
-        item.controller = TextEditingController(text: item.text);
-        item.controller.value = TextEditingValue(text: item.text);
         notifyListeners();
       });
 
