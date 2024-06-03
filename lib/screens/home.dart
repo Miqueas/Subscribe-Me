@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:subscribe_me/widgets/home/atoms/home_new_button_atom.dart";
 
 final class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -19,32 +20,9 @@ final class HomeScreen extends StatelessWidget {
               Color.fromARGB(255, 34, 2, 39),
               Color.fromARGB(255, 15, 0, 19)])),
           alignment: Alignment.center,
-          child: Column(
+          child: const Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Text("Subscribe Me!",
-                style: TextStyle(
-                  fontSize: 36,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              const Text("Create subscriptions for your users, the right way",
-                style: TextStyle(
-                  fontSize: 14,
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(10),
-                child: FilledButton.icon(
-                  icon: const Icon(Icons.add),
-                  label: const Text("New subscription"),
-                  onPressed: () => Navigator.pushNamed(context, "/create_subscription"),
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
+              Text("Subscribe Me!", style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold)),
+              Text("Create subscriptions for your users, the right way", style: TextStyle(fontSize: 14)),
+              HomeNewButtonAtom()]))));}}
