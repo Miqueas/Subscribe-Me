@@ -18,7 +18,7 @@ final class BannerMolecule extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final provider = Provider.of<BannerProvider>(context);
-    final children = <Widget>[ const BannerIconAtom()];
+    final children = <Widget>[const BannerIconAtom()];
 
     if (provider.banner.filePath != "") {
       children.add(BannerImageAtom(path: provider.banner.filePath));

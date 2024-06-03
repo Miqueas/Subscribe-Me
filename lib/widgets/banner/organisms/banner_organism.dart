@@ -24,16 +24,18 @@ final class BannerOrganism extends StatelessWidget {
 
     return BannerMolecule(
       deleteBannerTrigger: provider.removeBanner,
-      addBannerTrigger: () {
+      addBannerTrigger: () async {
         if (!Platform.isAndroid && !Platform.isIOS) {
-          provider.selectBanner(ImageSource.gallery); return;
+          provider.selectBanner(ImageSource.gallery).whenComplete(() {
+            subscriptionProvider.setBanner(provider.banner);
+          }); return;
         }
 
         showModalBottomSheet(
           backgroundColor: const Color(0x00FFFFFF),
           context: context,
           builder: (context) => BannerModalBottomSheetMolecule(
-            cameraTrigger: () => provider.selectBanner(ImageSource.camera),
-            galleryTrigger: () => provider.selectBanner(ImageSource.gallery)));
-
-        subscriptionProvider.setBanner(provider.banner);});}}
+            cameraTrigger: () => provider.selectBanner(ImageSource.camera).whenComplete(() {
+              subscriptionProvider.setBanner(provider.banner);}),
+            galleryTrigger: () => provider.selectBanner(ImageSource.gallery).whenComplete(() {
+              subscriptionProvider.setBanner(provider.banner);})));});}}
