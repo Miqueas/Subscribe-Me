@@ -1,7 +1,7 @@
 import "package:flutter/material.dart";
 
-final class Label extends StatelessWidget {
-  const Label({super.key, required this.text, required this.padding});
+final class LabelAtom extends StatelessWidget {
+  const LabelAtom({super.key, required this.text, required this.padding});
 
   final String text;
   final double padding;
