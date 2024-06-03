@@ -2,16 +2,11 @@ import "package:flutter/material.dart";
 
 final class DropdownProvider extends ChangeNotifier {
   double fee;
-  var controller = TextEditingController();
 
-  DropdownProvider(this.fee) {
-    controller.addListener(() {
-      fee = double.parse(controller.text);
-    });
-  }
+  DropdownProvider(this.fee);
 
-  void setFee(double fee) {
-    this.fee = fee;
+  void setFee(double? value) {
+    fee = value ?? fee;
     notifyListeners();
   }
 }

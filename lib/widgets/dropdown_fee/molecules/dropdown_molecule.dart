@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 import "package:provider/provider.dart";
 import "package:subscribe_me/controllers/dropdown_fee_controller.dart";
+import "package:subscribe_me/controllers/subscription_controller.dart";
 import "package:subscribe_me/widgets/common/atoms/label_atom.dart";
 import "package:subscribe_me/widgets/dropdown_fee/atoms/dropdown_menu_atom.dart";
 
@@ -9,6 +10,7 @@ final class DropdownMolecule extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final subscriptionProvider = Provider.of<SubscriptionProvider>(context);
     final provider = Provider.of<DropdownProvider>(context);
 
     return Column(
@@ -17,6 +19,8 @@ final class DropdownMolecule extends StatelessWidget {
         const LabelAtom(text: "Set your monthly subscription fee", padding: 40),
         Padding(
           padding: const EdgeInsets.only(top: 10),
-          child: DropdownMenuAtom(controller: provider.controller))]);
+          child: DropdownMenuAtom(trigger: (value) {
+            provider.setFee(value);
+            subscriptionProvider.setFee(provider.fee);}))]);
   }
 }
