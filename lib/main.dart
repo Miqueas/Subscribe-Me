@@ -11,9 +11,9 @@ final class SubscribeMe extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: buildTheme(),
+      theme: theme,
+      darkTheme: theme,
       routes: { "/create_subscription": (context) => const CreateSubscriptionScreen() },
-      home: const HomeScreen(),
-    );
+      home: const HomeScreen());
   }
 }
