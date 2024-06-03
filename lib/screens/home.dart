@@ -9,7 +9,16 @@ final class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
       child: Scaffold(
-        body: Center(
+        body: Container(
+          decoration: const BoxDecoration(gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            stops: [ 0.02, 0.2, 1 ],
+            colors: [
+              Color.fromARGB(255, 11, 1, 31),
+              Color.fromARGB(255, 34, 2, 39),
+              Color.fromARGB(255, 15, 0, 19)])),
+          alignment: Alignment.center,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -21,7 +30,7 @@ final class HomeScreen extends StatelessWidget {
               ),
               const Text("Create subscriptions for your users, the right way",
                 style: TextStyle(
-                  fontSize: 16,
+                  fontSize: 14,
                 ),
               ),
               Padding(
